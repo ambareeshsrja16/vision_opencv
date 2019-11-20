@@ -8,10 +8,10 @@ if(NOT ANDROID)
   if(PYTHONLIBS_VERSION_STRING VERSION_LESS 3)
     find_package(Boost REQUIRED python)
   else()
-    find_package(Boost REQUIRED python3)
+    find_package(Boost REQUIRED python-py35)
   endif()
 else()
-find_package(Boost REQUIRED)
+find_package(Boost REQUIRED python-py35)
 endif()
 find_package(OpenCV 3 REQUIRED
   COMPONENTS
